@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung 01</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+        .card {
+            width: 700px;
+            display: flex;
+        }
+        img {
+            width: 40%;
+            border-radius: 10px 0 0 10px;
+        }
+        .info {
+            background-color: #000;
+            color: #fff;
+            width: 50%;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            border: 1px solid black;
+            border-radius: 0 10px 10px 0;
+        }
+        .name, .position {
+            margin: .25rem;
+
+        }
+        .position {
+            color: #ccc;
+            font-weight: normal;
+            line-height: 1.35rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="profile.jpg" alt="a manschgerl">
+        <header class="info">
+            <h1 class="name">Vorname Nachname</h1>
+            <h4 class="position">Position with a lot of Text to break lines correctly</h4>
+        </header>
+
+    </div>
+</body>
+</html>
