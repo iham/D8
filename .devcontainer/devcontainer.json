@@ -1,8 +1,9 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "D8 - Node.js Angular Project",
+	"name": "D8 Node.js & Angular project",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-"remoteUser": "node"
+	"postCreateCommand": "sudo npm install -g @angular/cli",
+  	"remoteUser": "node"
 }
