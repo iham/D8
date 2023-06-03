@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+</html>
+
+<head>
+    <title>Übung Visitenkarte</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1,0">
+    <style>
+        section {
+            display: flex;
+            background-color: #000000;
+            color: #ffffff;
+            width: 400px;
+            font-family: sans-serif;
+            margin: 100px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .content {
+            color: #fff;
+            font-size: 16px;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 400px) {
+            section {
+                flex-direction: column;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="column">
+            <img class="image"
+                src="https://media.gettyimages.com/id/1290658063/de/foto/portr%C3%A4t-einer-sch%C3%B6nen-frau-mit-nat%C3%BCrlichem-make-up.jpg?s=2048x2048&w=gi&k=20&c=-jlzQmw4_2vhJg49lIJgAhJdkH9S6nrZ3b67Mt6JUww="
+                alt="Bildbeschreibung">
+        </div>
+        <div class="column">
+            <div class="content">
+                <h1>Mathilde Verve</h1>
+                <p>Art Director</p>
+                <p>at Bistin Design</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
