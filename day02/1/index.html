@@ -1,12 +1,107 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "header header header header"
+                "content content content sidebar"
+                "footer footer footer footer";
+            grid-auto-columns: 1fr;
+        }
+
+        .container-2 {
+            max-width: 960px;
+            margin: 2rem auto;
+        }
+
+        .content-wrap {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .container-3 {
+            max-width: 960px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+            gap: 1rem;
+            /* grid-column-gap: 1rem; */
+            /* grid-row-gap: 2rem;*/
+        }
+
+    </style>
 </head>
 <body>
-    
+<div class="container">
+    <div class="header box">[HEADER]</div>
+    <div class="content box">[CONTENT]</div>
+    <div class="sidebar box">[SIDEBAR]</div>
+    <div class="footer box">[FOOTER]</div>
+</div>
+
+
+<div class="container-2">
+    <div class="box">HEADER</div>
+    <div class="content-wrap">
+        <div class="box">CONTENT</div>
+        <div class="box">SIDEBAR</div>
+    </div>
+    <div class="box">FOOTER</div>
+</div>
+
+
+<div class="container-3">
+    <div class="box">CONTENT-1</div>
+    <div class="box">CONTENT-2</div>
+    <div class="box">CONTENT-3</div>
+    <div class="box">CONTENT-4</div>
+    <div class="box">CONTENT-5</div>
+    <div class="box">CONTENT-6</div>
+    <div class="box">CONTENT-7</div>
+    <div class="box">CONTENT-8</div>
+    <div class="box">CONTENT-9</div>
+    <div class="box">CONTENT-10</div>
+    <div class="box">CONTENT-11</div>
+</div>
+
+
 </body>
 </html>
