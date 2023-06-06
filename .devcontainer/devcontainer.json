@@ -7,7 +7,8 @@
 	"postCreateCommand": "sudo npm install -g @angular/cli",
 	"extensions": [
 		"ms-vscode.live-server",
-		"glenn2223.live-sass"
+		"glenn2223.live-sass",
+		"EditorConfig.EditorConfig"
 	],
   	"remoteUser": "node"
 }

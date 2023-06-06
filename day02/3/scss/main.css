@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-template-areas: "logo nav" "sujet sujet" "content content" "partners partners";
+}
+.container .logo {
+  grid-area: logo;
+  place-self: center left;
+}
+.container .logo img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.container .navigation {
+  place-self: center right;
+  grid-area: nav;
+  align-self: self-end;
+}
+.container .navigation ul {
+  display: none;
+}
+.container .navigation .menu img {
+  max-width: 64px;
+  height: auto;
+  vertical-align: middle;
+}
+.container .actions {
+  grid-area: actions;
+  display: none;
+}
+.container .content {
+  grid-area: content;
+}
+.container .sujet {
+  grid-area: sujet;
+  place-self: center center;
+}
+.container .partners {
+  grid-area: partners;
+}
+.container .partners ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "forbes techcrunch techcrunch wired wired cnn" "bbc cbs fastcompany fastcompany huffpost huffpost";
+}
+.container .partners ul li {
+  place-self: center start;
+}
+.container .partners ul li.partner-item-1 {
+  grid-area: forbes;
+}
+.container .partners ul li.partner-item-2 {
+  grid-area: techcrunch;
+}
+.container .partners ul li.partner-item-3 {
+  grid-area: wired;
+}
+.container .partners ul li.partner-item-4 {
+  grid-area: cnn;
+}
+.container .partners ul li.partner-item-5 {
+  grid-area: bbc;
+}
+.container .partners ul li.partner-item-6 {
+  grid-area: cbs;
+}
+.container .partners ul li.partner-item-7 {
+  grid-area: fastcompany;
+}
+.container .partners ul li.partner-item-8 {
+  grid-area: huffpost;
+}
+.container .partners ul li img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "logo nav nav nav nav actions" "content content content sujet sujet sujet" "partners partners partners sujet sujet sujet";
+  }
+  .container .navigation {
+    place-self: center start;
+  }
+  .container .navigation ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+  }
+  .container .navigation .menu {
+    display: none;
+  }
+  .container .actions {
+    display: block;
+    place-self: center start;
+  }
+  .container .partners ul {
+    gap: 2rem 3rem;
+  }
+}/*# sourceMappingURL=main.css.map */

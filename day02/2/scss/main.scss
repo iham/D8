@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+}
+
+body {
+  color: darken($primary-color, 10%);
+  font-family: $text-font;
+}
+
+p {
+  color: lighten($primary-color, 10%);
+}
+
+.button {
+    @include btn(yellow);
+    &.accent{
+        @include btn($accent-color);
+    }
+    &.warn {
+        @include btn($primary-color);
+    }
+}
+
+nav {
+  ul {
+    @include horizontal-list();
+  }
+}
+
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.box {
+    border: 1px solid black;
+    @include line();
+}

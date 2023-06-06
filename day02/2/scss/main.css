@@ -1,1 +1,187 @@
-/*# sourceMappingURL=main.css.map */
+.space-xs {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.space-sm {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.space-md {
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+
+.space-lg {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.space-xl {
+  margin: 2.5rem;
+  padding: 2.5rem;
+}
+
+.space-xxl {
+  margin: 3.5rem;
+  padding: 3.5rem;
+}
+
+.space-xxxl {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.space-xx34xl {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.space-xxxel {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.space-xxxtl {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.space-xxrxl {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.space-xxxrl {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.space-xxxgl {
+  margin: 4.5rem;
+  padding: 4.5rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-cols-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-cols-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.grid-cols-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.grid-cols-11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Bitter, serif;
+}
+
+body {
+  color: #eb2727;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  color: #f38585;
+}
+
+.button {
+  min-width: 120px;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background: yellow;
+  color: #666600;
+  border-color: #666600;
+  cursor: pointer;
+}
+.button:hover {
+  background: #cccc00;
+}
+.button.accent {
+  min-width: 120px;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background: #56efc4;
+  color: #0f9d75;
+  border-color: #0f9d75;
+  cursor: pointer;
+}
+.button.accent:hover {
+  background: #27ebb4;
+}
+.button.warn {
+  min-width: 120px;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background: #ef5656;
+  color: #9d0f0f;
+  border-color: #9d0f0f;
+  cursor: pointer;
+}
+.button.warn:hover {
+  background: #eb2727;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+
+.grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.box {
+  border: 1px solid black;
+  border-bottom: 4px solid red;
+}/*# sourceMappingURL=main.css.map */
