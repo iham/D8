@@ -59,6 +59,7 @@ body {
 .container .btn.dark {
   color: white;
   background-color: black;
+  border: 1px solid black;
 }
 .container .actions {
   grid-area: actions;
