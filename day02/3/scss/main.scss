@@ -1,7 +1,14 @@
+@import "variables";
+
 * {
   box-sizing: border-box;
 }
+body {
+  font-family: $text-font;
+  color: $text-color;
+}
 .container {
+  padding: 0 .5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -28,16 +35,41 @@
     align-self: self-end;
     ul {
       display: none;
+      li a {
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+          color: darken($text-color, 30%);
+        }
+      }
     }
     .menu {
       img {
         max-width: 64px;
         height: auto;
         vertical-align: middle;
+        padding: 1rem;
       }
     }
   }
+  .btn {
+    padding: .5em 1em;
+    border: 1px solid $text-color;
+    border-radius: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+    &.light {
+      color: $text-color;
+      background-color: white;
+    }
+    &.dark {
+      color: white;
+      background-color: black;
+    }
 
+  }
   .actions {
     grid-area: actions;
     display: none;
@@ -45,11 +77,22 @@
 
   .content {
     grid-area: content;
+    h1 {
+      font-family: $header-font;
+      color: darken($color: $text-color, $amount: 80%);
+    }
   }
 
   .sujet {
     grid-area: sujet;
     place-self: center center;
+    padding: 1rem 2rem;
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
   }
 
   .partners {
@@ -95,7 +138,6 @@
         }
   
         img {
-          // object-fit: cover;
           max-width: 100%;
           height: auto;
           vertical-align: middle;
@@ -109,9 +151,11 @@
 
 @media screen and (min-width: 640px) {
   .container {
+    max-width: 980px;
+    margin: 0 auto;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
-      "logo nav nav nav nav actions"
+      "logo nav nav nav actions actions"
       "content content content sujet sujet sujet"
       "partners partners partners sujet sujet sujet";
 
@@ -122,8 +166,6 @@
           gap: 2rem;
           list-style-type: none;
           padding: 0;
-          li {
-          }
         }
         .menu {
           display: none;
@@ -131,7 +173,13 @@
       }
       .actions {
         display: block;
-        place-self: center start;
+        place-self: center end;
+      }
+      .sujet {
+        padding: 4rem;
+      }
+      .content {
+        padding-top: 4rem;
       }
       .partners {
         ul {

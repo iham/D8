@@ -2,7 +2,13 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+}
+
 .container {
+  padding: 0 0.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -25,10 +31,34 @@
 .container .navigation ul {
   display: none;
 }
+.container .navigation ul li a {
+  text-decoration: none;
+  color: #666;
+}
+.container .navigation ul li a:hover {
+  color: #1a1a1a;
+}
 .container .navigation .menu img {
   max-width: 64px;
   height: auto;
   vertical-align: middle;
+  padding: 1rem;
+}
+.container .btn {
+  padding: 0.5em 1em;
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  cursor: pointer;
+}
+.container .btn.light {
+  color: #666;
+  background-color: white;
+}
+.container .btn.dark {
+  color: white;
+  background-color: black;
 }
 .container .actions {
   grid-area: actions;
@@ -37,9 +67,19 @@
 .container .content {
   grid-area: content;
 }
+.container .content h1 {
+  font-family: Bitter, serif;
+  color: black;
+}
 .container .sujet {
   grid-area: sujet;
   place-self: center center;
+  padding: 1rem 2rem;
+}
+.container .sujet img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 .container .partners {
   grid-area: partners;
@@ -90,8 +130,10 @@
 
 @media screen and (min-width: 640px) {
   .container {
+    max-width: 980px;
+    margin: 0 auto;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "logo nav nav nav nav actions" "content content content sujet sujet sujet" "partners partners partners sujet sujet sujet";
+    grid-template-areas: "logo nav nav nav actions actions" "content content content sujet sujet sujet" "partners partners partners sujet sujet sujet";
   }
   .container .navigation {
     place-self: center start;
@@ -107,7 +149,13 @@
   }
   .container .actions {
     display: block;
-    place-self: center start;
+    place-self: center end;
+  }
+  .container .sujet {
+    padding: 4rem;
+  }
+  .container .content {
+    padding-top: 4rem;
   }
   .container .partners ul {
     gap: 2rem 3rem;
