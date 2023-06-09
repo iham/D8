@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animations</title>
+
+    <style>
+        .parent {
+            margin: 200px;
+            position: relative;
+            height: 200px;
+            width: 200px;
+        }
+
+        .grand-parent {
+            margin: 150px;
+            position: relative;
+            height: 400px;
+            width: 400px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+
+        .box:hover {
+            animation-name: color-fade;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 5s;*/
+            animation-direction: alternate;
+            margin-bottom: 100px;
+        }
+
+
+        a {
+            transition: all .2s ease-in-out;
+            transform: translate(100px, 0);
+            margin-left: 100px;
+            display: block;
+            color: #000;
+        }
+
+        a:before {
+            content: '';
+            border: 1px solid #000;
+            width: 100px;
+            display: block;
+            position: absolute;
+            left: -110px;
+            top: 9px;
+        }
+
+        a:after {
+            content: '';
+            width: 100px;
+            display: block;
+            position: absolute;
+            left: 110px;
+            top: 4px;
+            height: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+        }
+
+        a:hover {
+            transform: translate(10px, -10px);
+            margin-top: 10px;
+            color: red;
+        }
+
+        @keyframes color-fade {
+            0% {
+                background-color: red;
+            }
+            32% {
+                background-color: yellow;
+                transform: rotate(45deg) translateX(100px) skew(20deg);
+            }
+            50% {
+                background-color: green;
+                transform: rotate(90deg) translateZ(400px);
+            }
+            100% {
+                background-color: blue;
+                transform: rotate(360deg) translateY(100px) scale(2);
+            }
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+<div class="grand-parent">
+    <div class="parent">
+        <div class="box"></div>
+        <div class="box green"></div>
+    </div>
+</div>
+<a href="#">Hello World</a>
+
+
+</body>
+</html>
