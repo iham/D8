@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables instead of Preprocessor Variables</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-primary: #0d6efd;
+      --color-primary-subtle: #cfe2ff;
+      --color-secondary: #6c757d;
+      --color-secondary-subtle: #e2e3e5;
+      --color-success: #198754;
+      --color-success-subtle: #d1e7dd;
+      --color-info: #0dcaf0;
+      --color-info-subtle: #cff4fc;
+      --color-warning: #ffc107;
+      --color-warning-subtle: #fff3cd;
+      --color-danger: #dc3545;
+      --color-danger-subtle: #f8d7da;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    /* basic button and hover defined using css vars */
+    .btn {
+      display: block;
+      padding: 1rem 2rem;
+      margin: 2rem;
+      --btn-color: black;
+      --btn-bg: white;
+      color: var(--btn-color);
+      background-color: var(--btn-bg);
+      border: 1px solid var(--btn-color);
+      border-radius: 5px;
+    }
+    .btn:hover {
+      cursor: pointer;
+      color: var(--btn-bg);
+      background-color: var(--btn-color);
+      border-color: var(--btn-bg);
+    }
+
+    /* buttons using colors and only reseting values */
+    .btn.primary {
+      --btn-color: var(--color-primary);
+      --btn-bg: var(--color-primary-subtle);
+    }
+    .btn.secondary {
+      --btn-color: var(--color-secondary);
+      --btn-bg: var(--color-secondary-subtle);
+    }
+    .btn.success {
+      --btn-color: var(--color-success);
+      --btn-bg: var(--color-success-subtle);
+    }
+    .btn.info {
+      --btn-color: var(--color-info);
+      --btn-bg: var(--color-info-subtle);
+    }
+    .btn.danger {
+      --btn-color: var(--color-danger);
+      --btn-bg: var(--color-danger-subtle);
+    }
+    .btn.warning {
+      --btn-color: var(--color-warning);
+      --btn-bg: var(--color-warning-subtle);
+    }
+  </style>
+</head>
+<body>
+  <p>Defining button colors by only setting one default including its hover and then only change color values</p>
+  <p>NO S(A|C)SS needed here - still usefull for generating color classes thou.</p>
+  <button class="btn">Default</button>
+  <button class="btn primary">Primary</button>
+  <button class="btn secondary">Secondary</button>
+  <button class="btn success">Success</button>
+  <button class="btn info">Info</button>
+  <button class="btn danger">Danger</button>
+  <button class="btn warning">Warning</button>
+</body>
+</html>
