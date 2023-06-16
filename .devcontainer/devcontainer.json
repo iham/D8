@@ -4,11 +4,19 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	"postCreateCommand": "sudo npm install -g @angular/cli",
-	"extensions": [
-		"ms-vscode.live-server",
-		"glenn2223.live-sass",
-		"EditorConfig.EditorConfig"
-	],
+	"postCreateCommand": "sudo npm install -g @angular/cli --quiet --silent",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.live-server",
+				"glenn2223.live-sass",
+				"EditorConfig.EditorConfig",
+				"CelianRiboulet.webvalidator",
+				"IronGeek.vscode-env",
+				"formulahendry.auto-rename-tag"
+			],
+			"settings": {}
+		}
+	},
   	"remoteUser": "node"
 }
