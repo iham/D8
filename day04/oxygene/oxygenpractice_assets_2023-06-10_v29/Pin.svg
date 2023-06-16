@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56.7924528px" height="70px" viewBox="0 0 56.7924528 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Pin</title>
+    <g id="oxygen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oxygen" transform="translate(-1130, -9161)" fill="#FCBB08">
+            <g id="Contact" transform="translate(0, 8774)">
+                <g id="map" transform="translate(805, 0)">
+                    <g id="Pin" transform="translate(325, 387)">
+                        <path d="M28.3962264,70 C47.327044,52.7193528 56.7924528,38.8514283 56.7924528,28.3962264 C56.7924528,12.7134236 44.0790292,0 28.3962264,0 C12.7134236,0 0,12.7134236 0,28.3962264 C0,38.8514283 9.46540881,52.7193528 28.3962264,70 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

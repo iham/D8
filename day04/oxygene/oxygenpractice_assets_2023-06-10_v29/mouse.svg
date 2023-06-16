@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="43px" viewBox="0 0 26 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>mouse</title>
+    <g id="oxygen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oxygen" transform="translate(-707, -647)">
+            <g id="mouse" transform="translate(707, 647)">
+                <circle id="Oval-8" fill="#FFFFFF" cx="13" cy="11" r="3"></circle>
+                <rect id="Rectangle-52" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="24" height="41" rx="12"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
